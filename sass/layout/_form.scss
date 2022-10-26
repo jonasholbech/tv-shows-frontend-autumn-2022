@@ -291,18 +291,18 @@ legend + .form-group {
 }
 
 .range-wrap::before {
-  --reverseRange: ((var(--range) - 1) * -1);
-  content: "Weak";
+  --reverseRange: ((var(--range) - 2.5) * -1);
+  content: "Bad";
   font-size: 1em;
   font-family: system-ui;
   font-weight: calc(var(--reverseRange) * 1000);
   font-variation-settings: "wght" max(300, var(--reverseRange) * 1000);
 }
 .range-wrap::after {
-  content: "Strong";
+  content: "Awesome";
   font-size: 1em;
   font-family: system-ui;
-  font-weight: calc(var(--range, 0.5) * 1000);
+  font-weight: calc((var(--range, 0.5) - 2.5) * 1000);
   font-variation-settings: "wght" max(300, var(--range, 0.5) * 1000);
 }
 
