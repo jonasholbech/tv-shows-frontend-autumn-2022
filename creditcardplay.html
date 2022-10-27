@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" maxlength="16" name="cardnumber" />
+      <input type="text" maxlength="2" name="month" />
+      <input type="text" maxlength="2" name="year" />
+      <input type="text" maxlength="3" name="cvc" />
+      <button>PAY ME!!!</button>
+    </form>
+    <script>
+      document.querySelectorAll("input").forEach((el) => {
+        el.addEventListener("input", (e) => {
+          if (e.target.value.length == e.target.maxLength) {
+            e.target.nextElementSibling.focus();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
