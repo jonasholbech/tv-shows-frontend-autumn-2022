@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="">
+    <form action="https://google.com">
       <input type="text" maxlength="16" name="cardnumber" />
       <input type="text" maxlength="2" name="month" />
       <input type="text" maxlength="2" name="year" />
@@ -21,6 +21,10 @@
             e.target.nextElementSibling.focus();
           }
         });
+      });
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
       });
     </script>
   </body>
